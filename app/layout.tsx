@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import './globals.css'
 import Button from './components/button'
+import Opcoes from './components/opcoes'
 
 export const metadata = {
   title: 'O Que Assistir?',
@@ -18,17 +19,10 @@ export default function RootLayout({ children }: any) {
 
         {children}
         
-        <div className='flex gap-4 justify-center items-center'>
-            <Button targetPage="Série" targetLink="serie"/>
-            ou
-            <Button targetPage="Filme" targetLink="filme"/>
-        </div>
-        
         <footer className='text-center self-end fixed bottom-0 p-6 bg-customColor-dark opacity-90 w-screen'>
           <nav className='navlinks'>
             <Link className="navlink" href="/">Home</Link>
             <Link className="navlink" href="/lancamentos">Lançamentos</Link>
-            <Link className="navlink" href="/sugestoes">Sugestões</Link>
             <Link className="navlink" href="/login">Login</Link>
           </nav>
         </footer>

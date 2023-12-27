@@ -22,7 +22,7 @@ const config: Config = {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
         rokkitt: ['Rokkitt', 'sans-serif']
-      }
+      },
     },
   },
   plugins: [],

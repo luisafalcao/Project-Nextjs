@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import mainImage from '../public/home.svg'
+import Opcoes from './components/opcoes'
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
           src={mainImage}
           alt='Ilustração de uma pessoa sentada em um sofá com um balde de pipoca no colo'
         />
-        <h5>O que você quer ver agora?</h5>
+        <h4 className="text-center lowercase font-thin">O que você quer assistir agora?</h4>
+        <Opcoes />
     </main>
   )
 }
