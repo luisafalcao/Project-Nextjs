@@ -4,7 +4,7 @@ import { useFormState } from 'react-dom';
 import { gravarSugestao } from './Sugestoes';
 
 export default function Sugestoes() {
-    const [state, formAction] = useFormState(gravarSugestao, {})
+    const [state, formAction] = useFormState<{mensagem: string, nome: string, sugestao: string}>(gravarSugestao, {})
 
     return (
         <main>
