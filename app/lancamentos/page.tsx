@@ -1,12 +1,11 @@
 import { listarLancamentos } from "@/lib/lancamentos"
 import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from "react";
-
+  
 export default async function Lancamentos() {
     const lancamentos: any = await listarLancamentos();
 
     return (
         <main>
-            <hr />
             <h2 className="text-center lowercase font-thin my-10">Últimos Lançamentos</h2>
             <ul className="w-6/12 mx-auto">
                 {lancamentos.map((lancamento: { id: Key | null | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; overview: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; }) => (
