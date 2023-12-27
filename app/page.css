@@ -1,0 +1,14 @@
+button {
+    border: 1px solid white;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    transition: all .2s ease;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    font-weight: normal;
+    scale: 1.1;
+}

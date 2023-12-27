@@ -1,10 +1,14 @@
+import './page.css'
+
 export default function Home() {
   return (
-    <main className='grid'>
+    <main className='grid text-center'>
       <span>IMAGEM AQUI</span>
-      <div className='flex'>
-        <button>BOTAO AQUI</button>
-        <button>BOTAO AQUI</button>
+        <h5>O que você quer ver agora?</h5>
+      <div className='flex gap-4 justify-center items-center'>
+        <button className="button">Série</button>
+        ou
+        <button className="button">Filme</button>
       </div>
     </main>
   )

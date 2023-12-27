@@ -6,14 +6,19 @@ export default async function Lancamentos() {
 
     return (
         <main>
-            <h1>Lançamentos</h1>
-            <ul>
+            <hr />
+            <h2 className="text-center lowercase font-thin my-10">Últimos Lançamentos</h2>
+            <ul className="w-6/12 mx-auto">
                 {lancamentos.map((lancamento: { id: Key | null | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; overview: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; }) => (
-                <li className='m-5' key={lancamento.id}>
-                    <br />
-                    {lancamento.title}
-                    <br />
-                    {lancamento.overview}
+                <li className='p-5 flex gap-4 mb-10' key={lancamento.id}>
+                    <div>
+                        <img src="" alt="" className="h-80 w-40" />
+                    </div>
+                    <div>
+                        <h6>{lancamento.title}</h6>
+                        <br />
+                        <p className="font-thin">{lancamento.overview}</p>
+                    </div>
                 </li>
                 ))}
             </ul>
