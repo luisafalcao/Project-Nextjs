@@ -73,3 +73,8 @@ h1 {
 .navlink {
   @apply hover:scale-110
 }
+
+.question {
+  @apply text-center lowercase font-thin
+}
+
