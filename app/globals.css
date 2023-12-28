@@ -75,6 +75,6 @@ h1 {
 }
 
 .question {
-  @apply text-center lowercase font-thin
+  @apply text-center lowercase font-thin mb-5 mt-10
 }
 

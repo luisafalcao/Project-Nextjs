@@ -1,4 +1,4 @@
-import { listarLancamentos } from "@/lib/lancamentos"
+import { listarLancamentos } from "@/lib/listarlancamentos"
 import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from "react";
   
 export default async function Lancamentos() {
