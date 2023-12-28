@@ -62,6 +62,10 @@ h1 {
   @apply border-solid border-2 border-white py-4 px-8 uppercase font-thin transition-all hover:bg-white hover:text-black hover:font-normal hover:scale-110
 }
 
+.active {
+  @apply bg-white text-black font-normal
+}
+
 .navlinks {
   @apply uppercase font-light text-white gap-4 flex justify-center
 }

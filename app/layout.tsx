@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import './globals.css'
 import Button from './components/button'
-import Opcoes from './components/opcoes'
 
 export const metadata = {
   title: 'O Que Assistir?',

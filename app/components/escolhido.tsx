@@ -1,8 +1,9 @@
 import { listarGeneros } from "@/lib/generos"
 import { Key } from "react";
 
-export default async function Serie() {
-    const generos: any = await listarGeneros();
+export default async function Escolhido(props:any) {
+    const generos: any = await listarGeneros(props.type);
+
     return (
         <main>
             <h4 className="text-center lowercase font-thin mt-10 mb-5">Qual gênero você prefere?</h4>
