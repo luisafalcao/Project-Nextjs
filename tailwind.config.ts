@@ -23,6 +23,9 @@ const config: Config = {
         roboto: ['Roboto', 'sans-serif'],
         rokkitt: ['Rokkitt', 'sans-serif']
       },
+      maxWidth: {
+        '1/2': '700px'
+      }
     },
   },
   plugins: [],

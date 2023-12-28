@@ -21,9 +21,9 @@ export default function Conteudo({ type }:any) {
     }
 
     return (
-        <section>
+        <section className="max-w-1/2 m-auto">
             <h4 className="question">Qual gênero você prefere?</h4>
-            <select onChange={handleChange} name="selecionar-genero" id="selecionar-genero" className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+            <select onChange={handleChange} name="selecionar-genero" id="selecionar-genero" className="block appearance-none w-80 m-auto mb-10 bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                 <option value="-">-</option>
                 {generos.map((genero: any) => {
                     return <option key={genero.id} value={genero.id}>{genero.name}</option>
