@@ -20,14 +20,6 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  display: grid;
-  grid-template-rows: 1fr auto 1fr;
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
 }
 
 
@@ -61,7 +53,7 @@ h1 {
 }
 
 .button {
-  @apply border-solid border-2 border-white py-4 px-8 uppercase font-thin transition-all hover:bg-white hover:text-black hover:font-normal hover:scale-105
+  @apply border-solid border-2 border-white py-2 px-6 uppercase font-thin transition-all hover:bg-white hover:text-black hover:font-normal hover:scale-105
 }
 
 .button-wrapper {
@@ -83,11 +75,3 @@ h1 {
 .pergunta {
   @apply text-center lowercase font-thin mb-5
 }
-
-/* .main-home {
-  @apply grid text-center
-}
-
-.main-home {
-  grid-template-rows: auto auto 1fr;
-} */

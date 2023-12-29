@@ -2,6 +2,7 @@
 
 import { useFormState, useFormStatus } from 'react-dom';
 import { login } from '@/app/lib/infra/usuarios';
+import Button from '@/app/components/button';
 
 export default function LoginForm() {
     const [errorMessage, formAction] = useFormState(login, undefined);
@@ -47,9 +48,7 @@ export default function LoginForm() {
                     </div>
                 </div>
                 <div className="container py-5 px-5 mx-0 min-w-full flex flex-col items-center">
-                    <button className="m-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Entrar
-                    </button>
+                    <Button nome="Entrar"/>
                 </div>
                 <div className="flex h-5 items-end space-x-1">
                     {errorMessage && (

@@ -38,24 +38,21 @@ export default function Home() {
 		<main className={`main-home ${hideImage && 'mt-10'}`}>
 
 			{
-			!hideImage &&
-			<Image
-				className={`${tipo && 'scale-75'} h-full max-h-80 transition linear`}
-				src={mainImage}
-				alt='Ilustração de uma pessoa sentada em um sofá com um balde de pipoca no colo'
-			/>
-			}
-
-			{!tipo &&
-				<h4 className="pergunta">O que você quer assistir agora?</h4>
-			}
-			{
 				!click &&
 				<div className='button-wrapper'>
 					<Button nome="Série" tipo="tv" onClick={() => handleClick("tv")} />
 					ou
 					<Button nome="Filme" tipo="movie" onClick={() => handleClick("movie")} />
 				</div>
+			}
+
+			{
+			!hideImage &&
+			<Image
+				className="h-full fixed bottom-0 max-h-96 transition linear"
+				src={mainImage}
+				alt='Ilustração de uma pessoa sentada em um sofá com um balde de pipoca no colo'
+			/>
 			}
 
 			{renderConteudo()}
