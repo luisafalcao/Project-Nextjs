@@ -11,7 +11,7 @@ export default function RootLayout({ children }: any) {
   return (
     <html lang="en">
       <body className='grid font-roboto min-h-screen justify-center justify-items-center pt-6 bg-customColor-dark text-white'>
-        <header className='text-center p-8'>
+        <header className='text-center p-8 h-fit'>
           <h1 className='font-rokkitt uppercase font-bold'><Link href="/">{metadata.title}</Link></h1>
           <h6 className='italic font-light mt-4 lowercase'>{metadata.description}</h6>
           <nav className='navlinks mt-10'>
