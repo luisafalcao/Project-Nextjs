@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "vercel build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -12,6 +12,7 @@
     "@vercel/postgres": "^0.5.1",
     "aws-sdk": "^2.1527.0",
     "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "bcryptjs-react": "^2.4.6",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
