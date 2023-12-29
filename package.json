@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vercel/postgres": "^0.5.1",
+    "aws-sdk": "^2.1527.0",
     "bcrypt": "^5.1.1",
     "bcryptjs-react": "^2.4.6",
     "fs": "^0.0.1-security",
