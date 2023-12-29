@@ -1,8 +1,8 @@
-import { signOut } from "next-auth/react";
+import { signOut } from "@/auth";
 
 export default function Protegido() {
     return (
-        <main className="">
+        <main>
             <div>
                 <h1>Área Protegida</h1>
                 <div>
