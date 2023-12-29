@@ -16,13 +16,14 @@ export default function Home() {
 		setTipo(tipo)
 		setClick(true)
 		setReset(true)
+		setHideImage(true)
 	}
 
 	function renderConteudo() {
 		if (tipo === "tv") {
-			return (<Conteudo tipo="tv" setHideImage={setHideImage}/>)
+			return (<Conteudo tipo="tv" />)
 		} else if (tipo === "movie") {
-			return (<Conteudo tipo="movie" setHideImage={setHideImage}/>)
+			return (<Conteudo tipo="movie" />)
 		} else {
 			return
 		}
@@ -34,21 +35,10 @@ export default function Home() {
 		setReset(false)
 		setHideImage(false)
 	}
+
 	return (
-		<main className={`main-home ${hideImage && 'mt-10'}`}>
+		<main className={`h-fit flex flex-col content-between main-home mb-10`}>
 
-			{
-			!hideImage &&
-			<Image
-				className={`${tipo && 'scale-75'} h-full max-h-80 transition linear`}
-				src={mainImage}
-				alt='Ilustração de uma pessoa sentada em um sofá com um balde de pipoca no colo'
-			/>
-			}
-
-			{!tipo &&
-				<h4 className="pergunta">O que você quer assistir agora?</h4>
-			}
 			{
 				!click &&
 				<div className='button-wrapper'>
@@ -59,6 +49,15 @@ export default function Home() {
 			}
 
 			{renderConteudo()}
+			
+			{
+			!hideImage &&
+			<Image
+				className={`${tipo && 'scale-75'} h-full max-h-96 m-auto transition linear`}
+				src={mainImage}
+				alt='Ilustração de uma pessoa sentada em um sofá com um balde de pipoca no colo'
+			/>
+			}
 
 			{reset &&
 				<div className="button-wrapper">
