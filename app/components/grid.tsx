@@ -2,7 +2,7 @@
 import Image from "next/image"
 import refresh from '@/public/refresh.svg'
 
-export default function Grid({ pagina, titulo, tituloOriginal, sinopse, poster, rating, onClick, streaming, genero }: any) {
+export default function Grid({ pagina, titulo, tituloOriginal, sinopse, poster, rating, onClick, streaming, genero, tipo, release }: any) {
     const posterUrl = `https://image.tmdb.org/t/p/w300/${poster}`;
     return (
         <div className="flex flex-wrap gap-5">
@@ -14,7 +14,11 @@ export default function Grid({ pagina, titulo, tituloOriginal, sinopse, poster, 
                 <p><span className="text-amber-400">★</span> {rating}</p>
                 <p>{sinopse}</p>
                 {
-                pagina === "sugestao" &&
+                pagina = "lancamentos" &&
+                <p>{release}</p>
+                }
+                {
+                pagina === "sugestao" && tipo === "tv" &&
                     <>
                     <p><span className="font-bold">Onde Assistir:</span> {streaming}</p>
                     <Image

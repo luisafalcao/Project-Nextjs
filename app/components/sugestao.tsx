@@ -25,6 +25,7 @@ export default function Sugestao({ data, onClick, genero, tipo }:any) {
             onClick={onClick}
             streaming={streamings}
             genero={genero}
+            tipo={tipo}
         />
         </>
         
