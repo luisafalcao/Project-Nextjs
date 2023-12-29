@@ -26,7 +26,7 @@ export default function Conteudo({ tipo }:any) {
     }
 
     return (
-        <section className="max-w-1/2 m-auto mt-10">
+        <section className="max-w-1/2 m-auto">
             {!idioma &&
             <>
             <h4 className="pergunta">Escolha um idioma</h4>

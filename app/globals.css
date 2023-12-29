@@ -30,6 +30,8 @@ body {
     rgb(var(--background-start-rgb)); */
 }
 
+
+
 @layer base {
   h1 {
     @apply text-5xl;
@@ -79,6 +81,13 @@ h1 {
 }
 
 .pergunta {
-  @apply text-center lowercase font-thin mb-5 mt-10
+  @apply text-center lowercase font-thin mb-5
 }
 
+/* .main-home {
+  @apply grid text-center
+}
+
+.main-home {
+  grid-template-rows: auto auto 1fr;
+} */

@@ -33,16 +33,15 @@ export default function Home() {
     setReset(false)
   }
   return (
-    <main className='grid text-center'>
-        {!tipo && 
-        <div>
+    <main className='main-home'>
+
           <Image
-            className='h-full max-h-80'
+            className={`${tipo && 'scale-75'} h-full max-h-80 transition linear`}
             src={mainImage}
             alt='Ilustração de uma pessoa sentada em um sofá com um balde de pipoca no colo'
           />
+        {!tipo &&
           <h4 className="pergunta">O que você quer assistir agora?</h4>
-        </div>
         }
         {
         !click &&
