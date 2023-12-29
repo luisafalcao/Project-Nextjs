@@ -57,7 +57,7 @@ h1 {
 }
 
 .button-wrapper {
-  @apply flex gap-4 justify-center items-center mt-10
+  @apply flex gap-4 justify-center items-center my-8
 }
 
 .active {
@@ -65,7 +65,7 @@ h1 {
 }
 
 .navlinks {
-  @apply uppercase font-light text-white gap-4 flex justify-center
+  @apply uppercase font-normal text-black gap-4 flex justify-center
 }
 
 .navlink {

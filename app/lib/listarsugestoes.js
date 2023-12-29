@@ -15,6 +15,7 @@ export const listarSugestoes = async (tipo, id, idioma) => {
             sugestao = sugestoes[(Math.floor(Math.random() * sugestoes.length))]           
         })
 
+        console.log(sugestao)
     return sugestao;
 
 }

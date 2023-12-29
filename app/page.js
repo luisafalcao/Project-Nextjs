@@ -35,7 +35,7 @@ export default function Home() {
 		setHideImage(false)
 	}
 	return (
-		<main className={`main-home ${hideImage && 'mt-10'}`}>
+		<main className={`mt-10 main-home ${hideImage && 'mt-10'}`}>
 
 			{
 				!click &&
@@ -51,7 +51,7 @@ export default function Home() {
 			<Image
 				className="h-full fixed bottom-0 max-h-96 transition linear"
 				src={mainImage}
-				alt='Ilustração de uma pessoa sentada em um sofá com um balde de pipoca no colo'
+				alt='Ilustração de 3 pessoas sentadas em um sofá de costas.'
 			/>
 			}
 

@@ -17,6 +17,8 @@ const config: Config = {
         customColor: {
           dark: '#222222',
           light: 'white',
+          // accent: "#F9698C",
+          accent: "#FFDC4A"
         }
       },
       fontFamily: {

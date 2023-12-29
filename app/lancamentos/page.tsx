@@ -7,7 +7,6 @@ export default async function Lancamentos() {
 
     return (
         <main>
-            <h2 className="text-center lowercase font-thin my-10">Últimos Lançamentos</h2>
             <ul className="w-6/12 mx-auto">
                 {lancamentos.map((lancamento: { 
                     id: Key | null | undefined; 
