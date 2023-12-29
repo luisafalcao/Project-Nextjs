@@ -9,10 +9,12 @@ import Conteudo from './components/conteudo'
 export default function Home() {
   const [tipo, setTipo] = useState("")
   const [click, setClick] = useState(false)
+  const [reset, setReset] = useState(false)
 
   function handleClick(tipo) {
     setTipo(currState => currState = tipo)
-    setClick(!click)
+    setClick(true)
+    setReset(true)
   }
 
   function renderConteudo() {
@@ -25,6 +27,11 @@ export default function Home() {
     }
   }
 
+  function handleReset() {
+    setTipo("")
+    setClick(false)
+    setReset(false)
+  }
   return (
     <main className='grid text-center'>
         {!tipo && 
@@ -47,6 +54,12 @@ export default function Home() {
         }
 
         {renderConteudo()}
+
+        {reset &&
+        <div className="button-wrapper">
+            <Button nome="Começar novamente" onClick={handleReset}/>
+        </div>
+        }
   
     </main>
   )

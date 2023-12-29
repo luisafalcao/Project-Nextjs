@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import './globals.css'
-import Button from './components/button'
 
 export const metadata = {
   title: 'O Que Assistir?',
@@ -8,6 +7,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }: any) {
+
   return (
     <html lang="en">
       <body className='font-roboto min-h-screen justify-center justify-items-center py-6 bg-customColor-dark text-white'>
