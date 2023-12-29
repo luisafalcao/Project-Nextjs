@@ -59,7 +59,11 @@ h1 {
 }
 
 .button {
-  @apply border-solid border-2 border-white py-4 px-8 uppercase font-thin transition-all hover:bg-white hover:text-black hover:font-normal hover:scale-110
+  @apply border-solid border-2 border-white py-4 px-8 uppercase font-thin transition-all hover:bg-white hover:text-black hover:font-normal hover:scale-105
+}
+
+.button-wrapper {
+  @apply flex gap-4 justify-center items-center mt-10
 }
 
 .active {
@@ -71,10 +75,10 @@ h1 {
 }
 
 .navlink {
-  @apply hover:scale-110
+  @apply hover:scale-105
 }
 
-.question {
+.pergunta {
   @apply text-center lowercase font-thin mb-5 mt-10
 }
 

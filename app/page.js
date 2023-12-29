@@ -7,17 +7,19 @@ import Button from './components/button'
 import Conteudo from './components/conteudo'
 
 export default function Home() {
-  const [opcao, setOpcao] = useState("")
+  const [tipo, setTipo] = useState("")
+  const [click, setClick] = useState(false)
 
-  function handleClick(opcao) {
-    setOpcao(currState => currState = opcao)
+  function handleClick(tipo) {
+    setTipo(currState => currState = tipo)
+    setClick(!click)
   }
 
   function renderConteudo() {
-    if (opcao === "tv") {
-      return (<Conteudo type="tv" />)
-    } else if (opcao === "movie") {
-      return (<Conteudo type="movie" />)
+    if (tipo === "tv") {
+      return (<Conteudo tipo="tv" />)
+    } else if (tipo === "movie") {
+      return (<Conteudo tipo="movie" />)
     } else {
       return
     }
@@ -25,22 +27,24 @@ export default function Home() {
 
   return (
     <main className='grid text-center'>
-        {!opcao && 
+        {!tipo && 
         <div>
           <Image
             className='h-full max-h-80'
             src={mainImage}
             alt='Ilustração de uma pessoa sentada em um sofá com um balde de pipoca no colo'
           />
-          <h4 className="question">O que você quer assistir agora?</h4>
+          <h4 className="pergunta">O que você quer assistir agora?</h4>
         </div>
         }
-
-        <div className='flex gap-4 justify-center items-center'>
-            <Button title="Série" type="tv" onClick={() => handleClick("tv")} />
+        {
+        !click &&
+        <div className='button-wrapper'>
+            <Button nome="Série" tipo="tv" onClick={() => handleClick("tv")} />
             ou
-            <Button title="Filme" type="movie" onClick={() => handleClick("movie")} />
+            <Button nome="Filme" tipo="movie" onClick={() => handleClick("movie")} />
         </div>
+        }
 
         {renderConteudo()}
   
