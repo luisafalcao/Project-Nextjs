@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { listarGeneros } from "@/lib/listargeneros"
-import { listarSugestoes } from "@/lib/listarsugestoes"
+import { listarGeneros } from "../lib/listargeneros"
+import { listarSugestoes } from "@/app/lib/listarsugestoes"
 import Sugestao from "./sugestao";
 
 export default function Conteudo({ tipo, setHideImage }:any) {

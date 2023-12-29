@@ -3,7 +3,7 @@ import Credentials from 'next-auth/providers/credentials';
 import bcrypt from 'bcrypt';
 import { z } from 'zod';
 import { sql } from '@vercel/postgres';
-import type { Usuario } from '@/lib/domain/definicoes';
+import type { Usuario } from '@/app/lib/domain/definicoes';
 import { authConfig } from "./auth.config";
 
 async function getUsuario(email: string): Promise<Usuario | undefined> {

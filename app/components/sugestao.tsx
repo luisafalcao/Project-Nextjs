@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { listarStreamings } from "@/lib/listarstreamings"
+import { listarStreamings } from "@/app/lib/listarstreamings"
 import Grid from "./grid"
 
 export default function Sugestao({ data, onClick, genero, tipo }:any) {

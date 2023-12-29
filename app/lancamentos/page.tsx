@@ -1,4 +1,4 @@
-import { listarLancamentos } from "@/lib/listarlancamentos"
+import { listarLancamentos } from "@/app/lib/listarlancamentos"
 import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from "react";
 import Grid from "../components/grid";
 
