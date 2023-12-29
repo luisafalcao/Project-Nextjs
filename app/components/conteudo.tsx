@@ -3,10 +3,11 @@ import { listarGeneros } from "@/lib/listargeneros"
 import { listarSugestoes } from "@/lib/listarsugestoes"
 import Sugestao from "./sugestao";
 
-export default function Conteudo({ tipo }:any) {
+export default function Conteudo({ tipo, setHideImage }:any) {
     const [generos, setGeneros] = useState([]);
     const [sugestao, setSugestao] = useState(null)
     const [idioma, setIdioma] = useState(null)
+    const [generoSelecionado, setGeneroSelecionado] = useState("")
 
     useEffect(() => {
         async function getListadeGeneros() {
@@ -20,13 +21,17 @@ export default function Conteudo({ tipo }:any) {
         setIdioma(e.target.value)
     }
 
-    async function getSugestao(e: any) {
-        const sugestaoData: any = await listarSugestoes(tipo, e.target.value, idioma);
+    async function getSugestao(e: any = generoSelecionado) {
+        let genero = e.target ? e.target.value : e
+        const sugestaoData: any = await listarSugestoes(tipo, genero, idioma);
         setSugestao(sugestaoData);
+        setGeneroSelecionado(genero)
+        setHideImage(true)
     }
 
     return (
         <section className="max-w-1/2 m-auto">
+            
             {!idioma &&
             <>
             <h4 className="pergunta">Escolha um idioma</h4>
@@ -56,7 +61,7 @@ export default function Conteudo({ tipo }:any) {
             }
 
             {sugestao && 
-            <Sugestao data={sugestao} onClick={getSugestao} tipo={tipo}/>
+            <Sugestao data={sugestao} onClick={getSugestao} genero={generoSelecionado} tipo={tipo}/>
             }
             
         </section>

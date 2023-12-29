@@ -18,6 +18,7 @@ export default async function Lancamentos() {
                 }) => (
                 <li className='p-5 flex gap-4 mb-10' key={lancamento.id}>
                     <Grid 
+                        pagina="lancamento"
                         poster={lancamento.poster_path} 
                         titulo={lancamento.title} 
                         sinopse={lancamento.overview}

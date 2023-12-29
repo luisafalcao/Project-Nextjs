@@ -7,59 +7,65 @@ import Button from './components/button'
 import Conteudo from './components/conteudo'
 
 export default function Home() {
-  const [tipo, setTipo] = useState("")
-  const [click, setClick] = useState(false)
-  const [reset, setReset] = useState(false)
+	const [tipo, setTipo] = useState("")
+	const [click, setClick] = useState(false)
+	const [reset, setReset] = useState(false)
+	const [hideImage, setHideImage] = useState(false)
 
-  function handleClick(tipo) {
-    setTipo(currState => currState = tipo)
-    setClick(true)
-    setReset(true)
-  }
+	function handleClick(tipo) {
+		setTipo(tipo)
+		setClick(true)
+		setReset(true)
+	}
 
-  function renderConteudo() {
-    if (tipo === "tv") {
-      return (<Conteudo tipo="tv" />)
-    } else if (tipo === "movie") {
-      return (<Conteudo tipo="movie" />)
-    } else {
-      return
-    }
-  }
+	function renderConteudo() {
+		if (tipo === "tv") {
+			return (<Conteudo tipo="tv" setHideImage={setHideImage}/>)
+		} else if (tipo === "movie") {
+			return (<Conteudo tipo="movie" setHideImage={setHideImage}/>)
+		} else {
+			return
+		}
+	}
 
-  function handleReset() {
-    setTipo("")
-    setClick(false)
-    setReset(false)
-  }
-  return (
-    <main className='main-home'>
+	function handleReset() {
+		setTipo("")
+		setClick(false)
+		setReset(false)
+		setHideImage(false)
+	}
+	return (
+		<main className={`main-home ${hideImage && 'mt-10'}`}>
 
-          <Image
-            className={`${tipo && 'scale-75'} h-full max-h-80 transition linear`}
-            src={mainImage}
-            alt='Ilustração de uma pessoa sentada em um sofá com um balde de pipoca no colo'
-          />
-        {!tipo &&
-          <h4 className="pergunta">O que você quer assistir agora?</h4>
-        }
-        {
-        !click &&
-        <div className='button-wrapper'>
-            <Button nome="Série" tipo="tv" onClick={() => handleClick("tv")} />
-            ou
-            <Button nome="Filme" tipo="movie" onClick={() => handleClick("movie")} />
-        </div>
-        }
+			{
+			!hideImage &&
+			<Image
+				className={`${tipo && 'scale-75'} h-full max-h-80 transition linear`}
+				src={mainImage}
+				alt='Ilustração de uma pessoa sentada em um sofá com um balde de pipoca no colo'
+			/>
+			}
 
-        {renderConteudo()}
+			{!tipo &&
+				<h4 className="pergunta">O que você quer assistir agora?</h4>
+			}
+			{
+				!click &&
+				<div className='button-wrapper'>
+					<Button nome="Série" tipo="tv" onClick={() => handleClick("tv")} />
+					ou
+					<Button nome="Filme" tipo="movie" onClick={() => handleClick("movie")} />
+				</div>
+			}
 
-        {reset &&
-        <div className="button-wrapper">
-            <Button nome="Começar novamente" onClick={handleReset}/>
-        </div>
-        }
-  
-    </main>
-  )
+			{renderConteudo()}
+
+			{reset &&
+				<div className="button-wrapper">
+					<Button nome="Começar novamente" onClick={handleReset} />
+				</div>
+			}
+
+		</main>
+	)
 }
