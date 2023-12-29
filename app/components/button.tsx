@@ -3,9 +3,8 @@ export default function Button(props: any) {
         <button 
             onClick={props.onClick} 
             id={props.tipo} 
-            className="button"
-        >
-            {props.nome}
+            className="button">
+                {props.nome}
         </button>
     )
 }

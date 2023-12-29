@@ -12,6 +12,6 @@ export const listarLancamentos = async () => {
         .then(data => {
             lancamentos = data.results
         })
-        
+
     return lancamentos
 }

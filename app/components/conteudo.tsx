@@ -26,14 +26,15 @@ export default function Conteudo({ tipo, setHideImage }:any) {
         const sugestaoData: any = await listarSugestoes(tipo, genero, idioma);
         setSugestao(sugestaoData);
         setGeneroSelecionado(genero)
+        setHideImage(true)
     }
 
     return (
-        <section className="max-w-1/2 m-auto mb-10">
+        <section className="max-w-1/2 m-auto">
             
             {!idioma &&
             <>
-            <h4 className="pergunta">1. Escolha um idioma</h4>
+            <h4 className="pergunta">Escolha um idioma</h4>
             <select onChange={handleChangeIdioma} name="selecionar-idioma" id="selecionar-idioma" className="block appearance-none w-80 m-auto mb-10 bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                 <option value="-">-</option>
                 <option value="en">Inglês</option>
@@ -49,7 +50,7 @@ export default function Conteudo({ tipo, setHideImage }:any) {
 
             {idioma && !sugestao &&
             <>
-            <h4 className="pergunta">2. Qual gênero você prefere?</h4>
+            <h4 className="pergunta">Qual gênero você prefere?</h4>
             <select onChange={getSugestao} name="selecionar-genero" id="selecionar-genero" className="block appearance-none w-80 m-auto mb-10 bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                 <option value="-">-</option>
                 {generos.map((genero: any) => {
