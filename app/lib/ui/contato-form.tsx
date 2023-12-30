@@ -6,7 +6,7 @@ import { enviarMensagem } from "@/app/lib/enviarmensagem";
 import Button from '@/app/components/button';
 
 export default function ContatoForm() {
-    const [state, formAction] = useFormState(enviarMensagem, {});
+    const [state, formAction] = useFormState(enviarMensagem, undefined);
 
     return (
         <form action={formAction} className="space-y-3">
