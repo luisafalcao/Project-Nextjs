@@ -22,6 +22,7 @@ export default function RootLayout({ children }: any) {
             <Link className="navlink" href="/">Home</Link>
             <Link className="navlink" href="/lancamentos">Lançamentos</Link>
             <Link className="navlink" href="/login">Login</Link>
+            <Link className="navlink" href="/contato">Contato</Link>
           </nav>
         </footer>
       </body>
