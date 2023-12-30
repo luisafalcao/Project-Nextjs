@@ -9,7 +9,7 @@ export default function ContatoForm() {
     const [state, formAction] = useFormState(enviarMensagem, undefined);
 
     return (
-        <form action={formAction} className="space-y-3">
+        <form action={formAction} className="space-y-3 w-full">
             <div className="flex-1 rounded-lg px-6 pb-4 pt-8">
                 <div className="w-full">
                     <div>
