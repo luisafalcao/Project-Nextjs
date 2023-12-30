@@ -1,11 +1,12 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link";
 import refresh from '@/public/refresh.svg'
 
 export default function Grid({ pagina, titulo, tituloOriginal, sinopse, poster, rating, onClick, streaming, genero }: any) {
     const posterUrl = `https://image.tmdb.org/t/p/w300${poster}`;
-
+    // const tituloString: string = titulo.replace(/\s/g, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^\w\s]|_/g, '').toLowerCase(); 
     return (
         <div className="flex flex-wrap gap-5">
             <div className="flex-1 flex items-start justify-end text-right">
@@ -15,6 +16,7 @@ export default function Grid({ pagina, titulo, tituloOriginal, sinopse, poster, 
                 <h5>{titulo} {tituloOriginal && <span className="text-sm"> | <em>{tituloOriginal}</em></span>}</h5>
                 <p><span className="text-customColor-accent">★</span> {rating}</p>
                 <p>{sinopse}</p>
+                {/* <Link href={`/shows/${tituloString}`}>Saber Mais</Link> */}
                 {
                 pagina === "sugestao" &&
                     <>
