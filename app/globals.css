@@ -72,6 +72,6 @@ h1 {
   @apply hover:scale-105
 }
 
-.pergunta {
+.subtitulo {
   @apply text-center lowercase font-thin mb-5
 }
