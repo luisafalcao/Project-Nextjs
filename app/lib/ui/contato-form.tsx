@@ -25,7 +25,7 @@ export default function ContatoForm() {
                                 id="nome" 
                                 type="text" 
                                 name="nome" 
-                                value={state.nome}
+                                value={state?.nome ?? ''}
                                 required 
                             />
                         </div>
@@ -43,7 +43,7 @@ export default function ContatoForm() {
                                 id="email" 
                                 type="email" 
                                 name="email" 
-                                value={state.email}
+                                value={state?.email ?? ''}
                                 required 
                             />
                         </div>
@@ -59,9 +59,8 @@ export default function ContatoForm() {
                             <textarea 
                                 className="peer block w-full rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 text-black"
                                 id="conteudo" 
-                                type="text" 
                                 name="conteudo" 
-                                value={state.conteudo}
+                                value={state?.conteudo ?? ''}
                                 required 
                             ></textarea>
                         </div>
@@ -71,7 +70,7 @@ export default function ContatoForm() {
                     <Button nome="Enviar"/>
                 </div>
                 <div className="flex h-5 items-end space-x-1">
-                    {state.mensagem}
+                    {state?.mensagem ?? ''}
                 </div>
             </div>
         </form>
