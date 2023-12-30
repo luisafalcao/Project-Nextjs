@@ -1,6 +1,6 @@
 // esse arquivo pega o conteúdo da API
 export const listarLancamentos = async () => {
-    const API_KEY = process.env.API_KEY;
+    const API_KEY = 'fcb3d3cb23bc249914164b04bfb15491';
     const today = new Date()
     const last30days = new Date().setDate(today.getDate() - 30)
 

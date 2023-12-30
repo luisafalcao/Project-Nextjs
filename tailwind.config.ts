@@ -27,6 +27,9 @@ const config: Config = {
       },
       maxWidth: {
         '1/2': '700px'
+      },
+      flex: {
+        '1/2': '2 1 0%'
       }
     },
   },

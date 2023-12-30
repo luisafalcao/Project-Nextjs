@@ -49,7 +49,7 @@ export default function Home() {
 			{
 			!hideImage &&
 			<Image
-				className="h-full fixed bottom-0 max-h-96 transition linear"
+				className="h-full w-full fixed bottom-0 max-h-96 transition linear"
 				src={mainImage}
 				alt='Ilustração de 3 pessoas sentadas em um sofá de costas.'
 			/>
